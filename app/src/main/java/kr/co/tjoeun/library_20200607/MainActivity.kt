@@ -1,6 +1,7 @@
 package kr.co.tjoeun.library_20200607
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +18,12 @@ class MainActivity : BaseActivity() {
     }
     
     override fun setupEvents() {
+
+        callBtn.setOnClickListener {
+            val myUri = Uri.parse("tel:${phoneNumTxt.text}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
 
         profileImg.setOnClickListener {
             val myIntent = Intent(mContext, ViewProfileImageActivity::class.java)

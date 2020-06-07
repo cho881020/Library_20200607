@@ -15,10 +15,12 @@
         android:gravity="center"
         android:padding="10dp">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/iu_pic"/>
+            android:src="@drawable/iu_pic"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"/>
 
 
     </LinearLayout>
